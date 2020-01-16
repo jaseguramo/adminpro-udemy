@@ -1,0 +1,16 @@
+<h3>
+    {{ psTitle }} - {{ piProgress }}
+</h3>
+<div class="input-group">
+    <span class="input-group-btn">
+  <button class="btn btn-primary" (click)="changeValue(-5)" type="button">
+    <i class="mdi mdi-minus"></i>
+  </button>
+</span>
+    <input #txtProgress type="number" class="form-control" [(ngModel)]="piProgress" (ngModelChange)="onChangeEvent($event)" min="0" max="100">
+    <span class="input-group-btn">
+  <button class="btn btn-primary" (click)="changeValue(+5)" type="button">
+    <i class="mdi mdi-plus"></i>
+  </button>
+</span>
+</div>
